@@ -2,10 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>{{name}} | {{title}}</title>
 </head>
 <body>
     {{>header}}
-    <h1>Contact me Page</h1>
+    
+    <div>
+        <form action="">
+            <p style="margin-bottom: 0px;">Name</p>
+            <input id="nameInput" type="text">
+
+            <p style="margin-bottom: 0px;">Email</p>
+            <input id="emailInput" type="email" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g">
+
+            <p style="margin-bottom: 0px;">Message</p>
+            <input id="messageInput" type="text" size="10">
+
+            <br>
+            <button style="margin-top: 20px;">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

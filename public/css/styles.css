@@ -1,0 +1,38 @@
+.navigation-bar {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.navigation-bar span {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    font-family: Tahoma, monospace;
+    font-size: 25px;
+    color: #ABABAB;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.navigation-bar a active {
+    color: #000000;
+}
+
+.navigation-bar img {
+    height: 90%;
+    
+}
+
+.navigation-bar table {
+    float: right;
+    vertical-align: middle;
+}
