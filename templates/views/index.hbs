@@ -7,6 +7,34 @@
 </head>
 <body>
     {{>header}}
-    <h1>Home Page</h1>
+
+    <script>
+        var roleArray = ["Web Developer", "Software Developer", "Mobile App Developer", "Game Developer", "3D Modeler"];
+        var i = 0;
+        
+        function scrollRoles() {
+            setTimeout(function() {
+                document.getElementById("roleTitle").innerHTML = roleArray[i++];
+                if(i == roleArray.length)   {
+                    i = 0;
+                }
+                scrollRoles();
+            }, 2000);
+        }
+
+        scrollRoles();
+    </script>
+    <div class="homeBody">
+       <div class="homeTitle">
+            <span class="nameTitle">
+                Ethan D'souza
+            </span>
+            <div class="line"></div>
+            <span id="roleTitle" class="roleTitle">
+                Web Developer
+            </span>
+        </div> 
+    </div>
+    
 </body>
 </html>

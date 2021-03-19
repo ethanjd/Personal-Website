@@ -7,6 +7,49 @@
 </head>
 <body>
     {{>header}}
-    <h1>My Projects Page</h1>
+
+    {{!-- Project Navigator --}}
+    <table class="projectNavigator">
+        <tr>
+            <td>
+                <a href="/projects">All</a>
+            </td>
+            <td>
+                <a href="/projects#Github">Github</a>
+            </td>
+            <td>
+                <a href="/projects#3DModels">3D Models</a>
+            </td>
+            <td>
+                <a href="/projects#Games">Games</a>
+            </td>
+            <td>
+                <a href="/projects#Animations">Animations</a>
+            </td>
+            <td>
+                <a href="/projects#Websites">Websites</a>
+            </td>
+        </tr>
+    </table>
+
+    {{!-- Showcase --}}
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <div style="width: 100vw; height:fit-content; padding:0px;">
+        <ul class="showcase">
+            <li class="showcase-item">
+                <model-viewer src="/glb/mug.glb" alt="A 3D model of a mug" auto-rotate camera-controls></model-viewer>
+            </li>
+            <li class="showcase-item">
+                
+            </li>
+            <li class="showcase-item">
+                
+            </li>
+        </ul>
+    </div>
+    
+
 </body>
 </html>

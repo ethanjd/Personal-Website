@@ -8,19 +8,32 @@
 <body>
     {{>header}}
     
-    <div>
+    <div class="contactForm">
         <form action="">
-            <p style="margin-bottom: 0px;">Name</p>
-            <input id="nameInput" type="text">
+            <div class="formElement">
+                <label for="nameInput">Name</p>
+                <input id="nameInput" type="text">
+            </div>
+            
+            <div class="formElement">
+                <label for="emailInput">Email</p>
+                <input id="emailInput" type="email" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g">
+            </div>
+            
+            <div class="formElement">
+                <label for="subjectInput">Subject</p>
+                <input id="subjectInput" type="text">
+            </div>
 
-            <p style="margin-bottom: 0px;">Email</p>
-            <input id="emailInput" type="email" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g">
-
-            <p style="margin-bottom: 0px;">Message</p>
-            <input id="messageInput" type="text" size="10">
-
-            <br>
-            <button style="margin-top: 20px;">Submit</button>
+            <div class="formElement">
+                <label for="messageInput">Message</p>
+                <textarea id="messageInput" type="text" rows="5"></textarea>
+            </div>
+            
+            <div class="formElement">
+                <button>Submit</button>
+            </div>
+            
         </form>
     </div>
 </body>
