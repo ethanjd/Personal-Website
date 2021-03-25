@@ -1,23 +1,24 @@
-<div class="navigation-bar">
+<script>
+  var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 
+<div id="navbar" class="navigation-bar">
   <span class="linkBar">
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a> 
+    <a id="homeNavLink" href="/">Home</a>
+    <a id="projectsNavLink" href="/projects">Projects</a>
+    <a id="contactNavLink" class="currentLink" href="/contact">Contact</a> 
   </span>
-    
-  <table>
-    <tr>
-      <td>
-        <a href="">YT</a>
-      </td>
-      <td>
-    <a href="">IG</a>
-      </td>
-      <td>
-    <a href="">GH</a>
-      </td>
-    </tr>
-  </table>
+</div>
+
+<div class="iconGrid">
 
 </div>
