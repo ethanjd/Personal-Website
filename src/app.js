@@ -38,6 +38,20 @@ app.get('/contact', (req, res) => {
     })
 })
 
+app.get('/about', (req, res) => {
+    res.render('about', {
+        title: 'About Me',
+        name: 'Ethan Dsouza'
+    })
+})
+
+app.get('/experience', (req, res) => {
+    res.render('experience', {
+        title: 'Experience',
+        name: 'Ethan Dsouza'
+    })
+})
+
 app.get('*', (req,res) => {
     res.render('404', {
         title: 'Page Not Found',

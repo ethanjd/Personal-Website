@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after{
     box-sizing: border-box;
 }
 
@@ -8,22 +8,23 @@ html {
 
 body {
     margin: 0;
+    font-family: Trebuchet, monospace, sans-serif;
     background-color: #282c34;
 }
 
 .navigation-bar {
-    height: 80px;
     width: 100%;
     background-color: #282c34;
-    position: relative;
+    position: fixed;
     top: 0;
     margin: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     box-shadow: 0px 2px 10px black;
-    transition: top 0.3s;
+    transition: height 3s;
+}
+
+.navigation-bar #linkBar {
+    display: none;
 }
 
 .navigation-bar span {
@@ -34,14 +35,6 @@ body {
     justify-content: center;
 }
 
-.navigation-bar img {
-    max-height: 100px;
-    height: 100px;
-    position: fixed;
-    top: 10px;
-    left: calc(50% - 50px);
-}
-
 .navigation-bar a {
     text-decoration: none;
     font-family: Trebuchet, monospace, sans-serif;
@@ -49,7 +42,9 @@ body {
     color: #535353;
     margin-left: 15px;
     margin-right: 15px;
+    padding: 14px 16px;
     text-align: center;
+    display: block;
 }
 
 .currentLink {
@@ -62,14 +57,47 @@ body {
     text-align: center;
 }
 
-.navigation-bar img {
-    height: 90%;
-}
 
 .navigation-bar table {
     float: right;
     vertical-align: middle;
     border-spacing: 1px;
+    margin: 0;
+}
+
+.navigation-bar .menuBtn {
+    background: #282c34;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: #353535;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer h3 {
+    text-align: center;
+    color: white;
+}
+
+.iconBar {
+    width: 50%;
+    max-width: 400px;
+    margin: 4px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.iconBar a {
+    text-decoration: none;
+    color: white;
     margin: 0;
 }
 
@@ -79,9 +107,14 @@ body {
     align-items: center;
 }
 
+#homeNavLink {
+    color: white;
+}
+
 .homeTitle {
-    width: 100%;
-    font-size: 8vw;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 7vw;
     display: flex;
     flex-flow: column nowrap;
     font-family: Trebuchet, monospace, sans-serif;
@@ -133,15 +166,20 @@ body {
 }
 
 .projectNavigator {
-    margin: 50px auto;
-    /* padding: 10px; */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     border-spacing: 20px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
-.projectNavigator td {
-    width: 10vw;
-    line-height: 40px;
-    padding: 0px;
+.projectNavigator li {
+    width:fit-content;
+    height: 40px;
+    line-height: 20px;
+    padding: 5px;
     border: grey solid 1px;
     border-radius: 20px;
     text-align: center;
@@ -149,7 +187,7 @@ body {
     font-family: Trebuchet, monospace, sans-serif;
 }
 
-.projectNavigator td a {
+.projectNavigator li a {
     width: 100%;
     height: 100%;
     display: block;
@@ -157,13 +195,12 @@ body {
     color: white;
 }
 
-.projectNavigator td a:visited {
+.projectNavigator li a:visited {
     color: white;
 }
 
 .showcase {
     width: 100%;
-    height: 100px;
     padding: 0px;
     display: flex;
     flex-flow: row wrap;
@@ -213,6 +250,67 @@ model-viewer {
         height: 100%;
     }
 } */
+
+/* Experience Page */
+
+.contentWrapper {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.separator {
+    width: 90%;
+    height: 3px;
+    background: #535353;
+    margin: 10% auto;
+}
+
+li + li {
+    border-top: 3px solid #535353;
+}
+
+.experienceList {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.experienceList li {
+    padding: 1rem 0;
+    display: block;
+}
+
+.experienceList .overlay {
+    width: 80%;
+    max-width: 600px;
+    display: none;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #535353;
+}
+
+.experienceList img {
+    display: block;
+    width: 50%;
+    margin: 5% auto;
+    border: 2px solid white;
+}
+
+.experienceList h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.experienceList h3 {
+    margin: 0;
+    text-align: center;
+    color: #535353;
+}
 
 /*Contact Page*/
 

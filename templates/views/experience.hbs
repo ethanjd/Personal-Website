@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{{name}} | {{title}}</title>
+</head>
+<body>
+    {{>header}}
+
+    <script>
+            document.getElementById("experienceNavLink").style.color = "white";
+    </script>
+
+    <div class="contentWrapper">
+        <ul class="experienceList">
+            <li>
+                <div onclick="location.href='http://www.linktr.ee/BridginTheGapPodcast';" style="cursor: pointer">
+                    <img src="/img/experience/BTG logo.png" alt="Bridgin' The Gap Podcast Logo">
+                    <h2>Bridgin' The Gap Podcast</h3>
+                    <h3>Contributor</h3>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div onclick="location.href='https://beyondriyada.com/camp-202020/';" style="cursor: pointer">
+                    <img src="/img/logo.png" alt="Camp 202020 Logo">
+                    <h2>Camp 202020</h3>
+                    <h3>General Operations</h3>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div onclick="location.href='https://beyondriyada.com/forum-2/';" style="cursor: pointer">
+                    <img src="/img/logo.png" alt="Dubai Sports Academies Online Forum Logo">
+                    <h2>Dubai Sports Academies Online Forum</h3>
+                    <h3>General Operations</h3>
+                    <p></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    {{>footer}}
+</body>
+</html>

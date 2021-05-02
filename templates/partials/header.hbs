@@ -1,5 +1,5 @@
 <script>
-  var prevScrollpos = window.pageYOffset;
+/*var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -8,17 +8,31 @@ window.onscroll = function() {
     document.getElementById("navbar").style.top = "-80px";
   }
   prevScrollpos = currentScrollPos;
+}*/
+
+function menuClick() {
+  var x = document.getElementById("linkBar");
+
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
 </script>
 
 <div id="navbar" class="navigation-bar">
+  <a id="homeNavLink" href="/">Ethan Dsouza</a>
   <div id="linkBar" class="linkBar">
-    <a id="homeNavLink" href="/">Home</a>
+    <a id="aboutNavLink" href="/about">About</a>
     <a id="projectsNavLink" href="/projects">Projects</a>
+    <a id="experienceNavLink" href="/experience">Experience</a>
     <a id="contactNavLink" class="currentLink" href="/contact">Contact</a> 
   </div>
+  
+  <a href="javascript:void(0);" class="menuBtn" onclick="menuClick()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
+{{!-- <div style="height: 60px;"></div> --}}
 
-<div class="iconGrid">
-
-</div>
