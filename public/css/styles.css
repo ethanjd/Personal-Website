@@ -19,7 +19,6 @@ body {
     top: 0;
     margin: 0px;
     overflow: hidden;
-    box-shadow: 0px 2px 10px black;
     transition: height 3s;
 }
 
@@ -41,9 +40,13 @@ body {
     color: #535353;
     margin-left: 15px;
     margin-right: 15px;
-    padding: 14px 16px;
+    padding: 0.8rem 1rem;
     text-align: left;
     display: block;
+}
+.linkBar a {
+    padding: 0.5rem 1rem;
+    font-size:1.4rem;
 }
 
 .currentLink {
@@ -86,8 +89,8 @@ body {
 
 .icon {
     background: #fff;
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     text-align: center;
     line-height: 100px;
@@ -177,7 +180,6 @@ body {
 .aboutWrapper img {
     width: 85%;
     margin: 10vw 7.5%;
-    /* margin-left: 10%; */
 }
 
 .aboutWrapper h2 {
@@ -231,76 +233,56 @@ body {
     text-align: center;
 }
 
-
 /*Projects Page*/
 
 .projectsBody {
-    margin-top: 80px;
+    margin: 0.8em 0;
 }
 
-.projectNavigator {
-    margin: 0;
+.projectsList {
+    width:90%;
+    margin: 0 auto;
     padding: 0;
-    list-style-type: none;
-    border-spacing: 20px 0px;
+    max-width: 600px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    list-style-type: none;
 }
 
-.projectNavigator li {
-    width:fit-content;
-    height: 40px;
-    line-height: 20px;
-    padding: 5px;
-    border: grey solid 1px;
+.project {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.project + .project {
+    margin-top: 20px;
+}
+
+.project h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.project h2 {
+    margin: 0;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.projectButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.projectButtons a {
+    margin: 0 0.2em;
+    padding: 0.4em 0.8em;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
     border-radius: 20px;
-    text-align: center;
-    vertical-align: middle;
-    font-family: Trebuchet, monospace, sans-serif;
-}
-
-.projectNavigator li a {
-    width: 100%;
-    height: 100%;
-    display: block;
     text-decoration: none;
-    color: white;
-}
-
-.projectNavigator li a:visited {
-    color: white;
-}
-
-.showcase {
-    width: 100%;
-    padding: 0px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    list-style-type: none;
-    /* display:block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    width: 100%; */
-}
-
-.showcase-item {
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    background-color: #353535;
-    align-self: flex-start;
-    /* display: inline-block;
-    margin: 10px;
-    width: 25%;
-    text-align: center; */
-}
-
-model-viewer {
-    width: 100%;
-    height: 100%;
 }
 
 /* @media (min-width: 959px) {
@@ -326,11 +308,71 @@ model-viewer {
 
 /* Experience Page */
 
-.contentWrapper {
-    width: 80%;
+.experienceBody {
+    margin: 0.8em;
+}
+
+.experienceList {
+    width: 90%;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;    
     list-style-type: none;
+}
+
+.experience {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.experience + .experience {
+    margin-top: 20px;
+}
+
+.experience h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.experience h2 {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.experience h3 {
+    margin: 0;
+    font-size: 0.7rem;
+    color: grey;
+}
+
+.experience img {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    transition-property: height, width;
+    transition-duration: 500ms;
+}
+
+/* .experience img:hover {
+    width: 130px;
+    height: 130px;
+} */
+
+.experience a {
+    width: 100%;
+    margin: 0.4em 0;
+    padding: 0.4em 0.8em;
+    text-align: center;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
 .separator {
@@ -339,23 +381,7 @@ model-viewer {
     background: #535353;
     margin: 10% auto;
 }
-
-li + li {
-    border-top: 3px solid #535353;
-}
-
-.experienceList {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.experienceList li {
-    padding: 1rem 0;
-    display: block;
-}
-
+/* 
 .experienceList .overlay {
     width: 80%;
     max-width: 600px;
@@ -383,7 +409,7 @@ li + li {
     margin: 0;
     text-align: center;
     color: #535353;
-}
+} */
 
 /*Contact Page*/
 
@@ -433,14 +459,14 @@ li + li {
     background-color: #535353;
     color: white;
     border: 2px solid #282C34;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
 }
 
 .formElement input:invalid:focus {
     width: 100%;
     border: 2px solid #fd6f6f81;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -449,7 +475,7 @@ li + li {
     background-color: #535353;
     color: white;
     border: 2px solid #282C34;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     resize: none;
 }
@@ -457,16 +483,17 @@ li + li {
 .formElement textarea:invalid:focus {
     width: 100%;
     border: 2px solid #fd6f6f81;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
 }
 
 .formElement button {
-    background-color: white;
-    color: #535353;
     width: 100px;
     padding: 15px 0px;
-    margin-left: calc(50% - 50px);
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    color: #535353;
     border: 0px;
     border-radius: 100px;
     font-size: large;
