@@ -40,5 +40,5 @@ contactForm.addEventListener('submit', (e) => {
         .catch((error) => {
         console.log('Error:', error);
         });
-
+        contactForm.reset();
 })
