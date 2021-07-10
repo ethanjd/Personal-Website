@@ -10,46 +10,44 @@
 <body>
 
     {{>header}}
+    
+    <div id="formWrapper" class="formWrapper">
+        <h1>Get in touch!</h1>
+        
+        <h3>Drop me your info below</h3>
+
+        <p id="formSuccess" hidden="true">Thank you for reaching out, I will get back to you as soon as possible!</p>
+        <p id="formFailed" hidden="true">Sorry something went wrong, please refresh and try again later or try contacting me through one of the other methods posted!</p>
+    
+        <form class="contactForm">
+            <div class="formElement">
+                <label for="nameInput">Name</p>
+                <input id="nameInput" type="text" required>
+            </div>
+            
+            <div class="formElement">
+                <label for="emailInput">Email</p>
+                <input id="emailInput" type="email" required>
+            </div>
+            
+            <div class="formElement">
+                <label for="subjectInput">Subject</p>
+                <input id="subjectInput" type="text" required>
+            </div>
+
+            <div class="formElement">
+                <label for="messageInput">Message</p>
+                <textarea id="messageInput" type="text" rows="5" required></textarea>
+            </div>
+
+            <div class="formElement">
+                <button id="submitButton" type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
     <script>
         document.getElementById("contactNavLink").style.color = "white";
     </script>
-    
-    <div class="formWrapper">
-        <div id="contactForm" class="contactForm">
-            <h1>Get in touch!</h1>
-            
-            <h3>Drop me your info below</h3>
-
-            <p id="formSuccess" hidden="true">Thank you for reaching out! I will get back to you as soon as possible</p>
-
-            <p id="formFailed" hidden="true">Please fill out all fields of the form</p>
-
-            <form onsubmit="formSubmit()">
-                <div class="formElement">
-                    <label for="nameInput">Name</p>
-                    <input id="nameInput" type="text" required>
-                </div>
-                
-                <div class="formElement">
-                    <label for="emailInput">Email</p>
-                    <input id="emailInput" type="email" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g"  required>
-                </div>
-                
-                <div class="formElement">
-                    <label for="subjectInput">Subject</p>
-                    <input id="subjectInput" type="text" required>
-                </div>
-
-                <div class="formElement">
-                    <label for="messageInput">Message</p>
-                    <textarea id="messageInput" type="text" rows="5" required></textarea>
-                </div>
-                
-                <div class="formElement">
-                    <button>SUBMIT</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    <script type="text/javascript" src="/js/formHandle.js"></script>
 </body>
 </html>
