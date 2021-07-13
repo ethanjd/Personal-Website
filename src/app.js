@@ -1,12 +1,28 @@
 const path = require('path')
+const fs = require('fs')
+const http = require('http')
+const https = require('https')
 const express = require('express')
 const hbs = require('hbs')
 const nodemailer = require('nodemailer')
 
 require('dotenv').config()
 
+const cert = fs.readFileSync('ssl/www_ethanjd_com.crt')
+const ca = fs.readFileSync('ssl/www_ethanjd_com.ca-bundle')
+const key = fs.readFileSync('csr/ethanjd_com.key')
+const httpsOptions = {
+    cert,
+    ca,
+    key
+}
+
 const app = express()
-const port = process.env.PORT || 3000
+const httpServer = http.createServer(app)
+const httpsServer = https.createServer(httpsOptions, app)
+const httpPort = process.env.PORT || 3000
+const httpsPort = 443
+const host = process.env.HOST || '0.0.0.0'
 
 //create constants with relative paths to views and partials
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -86,6 +102,27 @@ app.get('*', (req,res) => {
     })
 })
 
-app.listen(port, () =>{
-    console.log('Server is up in port ' + port)
+app.use((req, res, next) => {
+    if(req.protocol === 'http') {
+      res.redirect(301, `https://${req.headers.host}${req.url}`);
+    }
+    next();
+ });
+
+
+//Server listen on localhost
+//
+// app.listen(port, () =>{
+//     console.log('Server is up in port ' + port)
+// })
+
+httpServer.listen(httpPort, host, () => {
+    console.log('HTTP server is up in port ' + httpPort)
 })
+
+httpsServer.listen(httpsPort, host, () => {
+    console.log('HTTPS server is up in port ' + httpsPort)
+})
+
+
+
