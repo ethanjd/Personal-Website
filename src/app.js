@@ -20,8 +20,7 @@ const httpsOptions = {
 const app = express()
 const httpServer = http.createServer(app)
 const httpsServer = https.createServer(httpsOptions, app)
-const httpPort = process.env.PORT || 3000
-const httpsPort = 443
+const port = process.env.PORT || 0
 const host = process.env.HOST || '0.0.0.0'
 
 //create constants with relative paths to views and partials
@@ -116,12 +115,12 @@ app.use((req, res, next) => {
 //     console.log('Server is up in port ' + port)
 // })
 
-httpServer.listen(httpPort, host, () => {
-    console.log('HTTP server is up in port ' + httpPort)
+httpServer.listen(port, host, () => {
+    console.log('HTTP server is up in port ' + httpServer.address().port)
 })
 
-httpsServer.listen(httpsPort, host, () => {
-    console.log('HTTPS server is up in port ' + httpsPort)
+httpsServer.listen(port, host, () => {
+    console.log('HTTPS server is up in port ' + httpsServer.address().port)
 })
 
 
