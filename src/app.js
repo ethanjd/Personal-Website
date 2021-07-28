@@ -115,7 +115,7 @@ app.use((req, res, next) => {
 //     console.log('Server is up in port ' + port)
 // })
 
-httpServer.listen(port, host, () => {
+httpServer.listen(3000, host, () => {
     console.log('HTTP server is up in port ' + httpServer.address().port)
 })
 

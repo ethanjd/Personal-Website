@@ -268,13 +268,20 @@ body {
     color: grey;
 }
 
+.project p {
+    margin: 0;
+}
+
 .projectButtons {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    margin: 1rem 0;
 }
 
 .projectButtons a {
-    margin: 0 0.2em;
+    /* margin: 0 0.2em; */
+    width: 2rem;
+    height: 2rem;
     padding: 0.4em 0.8em;
     display: inline-block;
     background-color: #000;
