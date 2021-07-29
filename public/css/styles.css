@@ -42,9 +42,20 @@ body {
     text-align: left;
     display: block;
 }
+
+.menuBtn {
+    height: 68.8px;
+    padding: 1rem 1rem;
+}
+.navigation-bar img {
+    height: 80%;
+    display: inline-block;
+    margin-top: 4.325px;
+}
+
 .linkBar a {
     padding: 0.5rem 1rem;
-    font-size:1.8rem;
+    font-size: 1.8rem;
 }
 
 .currentLink {
@@ -86,13 +97,21 @@ body {
 }
 
 .icon {
-    background: #fff;
-    width: 2rem;
     height: 2rem;
+    width: 2rem;
+    background: #fff;
+    padding: .5rem;
+    margin: auto 0;
     border-radius: 50%;
     text-align: center;
     line-height: 100px;
     vertical-align: middle;
+}
+
+.icon img {
+    margin: 0;
+    display: inline-block;
+    height: 100%;
 }
 
 .iconBar {
@@ -175,7 +194,7 @@ body {
     margin: 0 auto;
 }
 
-.aboutWrapper img {
+.aboutImg {
     width: 85%;
     margin: 10vw 7.5%;
 }
@@ -216,11 +235,16 @@ body {
     text-align: center;
 }
 
+.resumeIcon {
+    height: 100%;
+}
+
 .aboutWrapper .resumelink {
     display: inline-block;
     color: #000;
+    height: 2rem;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     max-width: 600px;
     background-color: #fff;
     border: solid white 1px;
@@ -229,6 +253,7 @@ body {
     border-radius: 31.5px;
     text-decoration: none;
     text-align: center;
+    vertical-align: middle;
 }
 
 /*Projects Page*/
@@ -268,26 +293,27 @@ body {
     color: grey;
 }
 
-.project p {
+.projectButtons {
+    display: flex;
+    justify-content: center;
     margin: 0;
 }
 
-.projectButtons {
-    display: flex;
-    justify-content: start;
-    margin: 1rem 0;
-}
-
 .projectButtons a {
-    /* margin: 0 0.2em; */
     width: 2rem;
     height: 2rem;
-    padding: 0.4em 0.8em;
+    padding: 0.5rem;
     display: inline-block;
     background-color: #000;
     color: #fff;
     border-radius: 20px;
     text-decoration: none;
+    margin-right: .5rem;
+}
+
+.projectButtons img {
+    height: 100%;
+    
 }
 
 /* @media (min-width: 959px) {
@@ -353,26 +379,23 @@ body {
     color: grey;
 }
 
-.experience img {
+.experienceLogo {
     max-width: 150px;
     max-height: 150px;
     display: block;
     margin: 0 auto 10px;
     border-radius: 10px;
-    transition-property: height, width;
-    transition-duration: 500ms;
 }
 
-/* .experience img:hover {
-    width: 130px;
-    height: 130px;
-} */
+.experienceLinks {
+    display: flex;
+}
 
 .experience a {
-    width: 100%;
-    margin: 0.4em 0;
-    padding: 0.4em 0.8em;
-    text-align: center;
+    height: 2rem;
+    margin: 0.4em auto;
+    justify-content: center;
+    padding: 0.5rem;
     display: inline-block;
     background-color: #000;
     color: #fff;
@@ -380,12 +403,10 @@ body {
     text-decoration: none;
 }
 
-.separator {
-    width: 90%;
-    height: 3px;
-    background: #535353;
-    margin: 10% auto;
+.experience a img {
+    height: 100%;
 }
+
 /* 
 .experienceList .overlay {
     width: 80%;

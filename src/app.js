@@ -107,15 +107,8 @@ app.use((req, res, next) => {
     }
     next();
  });
-
-
-//Server listen on localhost
-//
-// app.listen(port, () =>{
-//     console.log('Server is up in port ' + port)
-// })
-
-httpServer.listen(3000, host, () => {
+ 
+httpServer.listen(port, host, () => {
     console.log('HTTP server is up in port ' + httpServer.address().port)
 })
 

@@ -4,16 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <script src="https://use.fontawesome.com/a2cde2054c.js"></script>
- 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> 
     <title>{{name}} | {{title}}</title>
 </head>
 <body>
     {{>header}}
     
     <div class="aboutWrapper">
-        <img src="img\about.jpg" alt="">
+        <img class="aboutImg" src="img\about.jpg" alt="">
         <h2>Hi, My name is</h2>
         <h1>Ethan Dsouza</h1>
         <h1 style="color: grey">Software Developer</h1>
@@ -25,24 +23,25 @@
             <a href="/projects">Projects</a>
             <a href="/experience">Experience</a>
             <a href="/contact">Contact me</a>
-             {{!-- style="background-color: white; color: black; border: 0px" --}}
         </div>
-        <a href="img/Ethan Dsouza Resume.pdf" class="resumelink" download>RESUME</a>
+        <a href="img/Ethan Dsouza Resume.pdf" class="resumelink" download>
+            <span style="display: inline-block; height:100%;">RESUME</span>
+        </a>
 
         <div class="iconBar">
             <a class="icon" href="http://www.github.com/ethanjd">
-                <i class="fas fa-github" style="color: black;"></i>
+                <img src="icons\github.png" alt="">
             </a>
             <a class="icon" href="http://www.linkedin.com/in/ethanjd">
-                <i class="fas fa-linkedin" style="color: black;"></i>
+                <img src="icons\linkedin.png" alt="">
             </a>
             <a class="icon" href="https://www.youtube.com/channel/UCIWwLY_UBlu9jr7IctrZp6w">
-                <i class="fas fa-youtube" style="color: black;"></i>
+                <img src="icons\youtube.png" alt="">
             </a>
             <a class="icon" href="/contact">
-                <i class="fas fa-envelope" style="color: black;"></i>
+                <img src="icons\email.png" alt="">
             </a>
-    </div>
+        </div>
     </div>
 
 
