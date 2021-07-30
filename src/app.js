@@ -8,18 +8,18 @@ const nodemailer = require('nodemailer')
 
 require('dotenv').config()
 
-// const cert = fs.readFileSync('ssl/www_ethanjd_com.crt')
-// const ca = fs.readFileSync('ssl/www_ethanjd_com.ca-bundle')
-// const key = fs.readFileSync('csr/ethanjd_com.key')
-// const httpsOptions = {
-//     cert,
-//     ca,
-//     key
-// }
+const cert = fs.readFileSync('ssl/www_ethanjd_com.crt')
+const ca = fs.readFileSync('ssl/www_ethanjd_com.ca-bundle')
+const key = fs.readFileSync('csr/ethanjd_com.key')
+const httpsOptions = {
+    cert,
+    ca,
+    key
+}
 
 const app = express()
 const httpServer = http.createServer(app)
-// const httpsServer = https.createServer(httpsOptions, app)
+const httpsServer = https.createServer(httpsOptions, app)
 const port = process.env.PORT || 0
 const host = process.env.HOST || '0.0.0.0'
 
@@ -101,27 +101,27 @@ app.get('*', (req,res) => {
     })
 })
 
-// app.use((req, res, next) => {
-//     if(req.protocol === 'http') {
-//       res.redirect(301, `https://${req.headers.host}${req.url}`);
-//     }
-//     next();
-//  });
+app.use((req, res, next) => {
+    if(req.protocol === 'http') {
+      res.redirect(301, `https://${req.headers.host}${req.url}`);
+    }
+    next();
+ });
 
 
-// Server listen on localhost
+//Server listen on localhost
+//
+// app.listen(port, () =>{
+//     console.log('Server is up in port ' + port)
+// })
 
-app.listen(3000, () =>{
-    console.log('Server is up in port ' + port)
+httpServer.listen(3000, host, () => {
+    console.log('HTTP server is up in port ' + httpServer.address().port)
 })
 
-// httpServer.listen(3000, host, () => {
-//     console.log('HTTP server is up in port ' + httpServer.address().port)
-// })
-
-// httpsServer.listen(port, host, () => {
-//     console.log('HTTPS server is up in port ' + httpsServer.address().port)
-// })
+httpsServer.listen(port, host, () => {
+    console.log('HTTPS server is up in port ' + httpsServer.address().port)
+})
 
 
 
