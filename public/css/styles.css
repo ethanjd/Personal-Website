@@ -174,18 +174,6 @@ body {
     text-align: center;
 }
 
-/* @media screen and (min-width: 768px) {
-    .homeTitle {
-        flex-flow: row nowrap;
-        align-items: center;
-    }
-    
-    .line {
-        transform: rotate(-90deg);
-        width: 10%;
-    }
-} */
-
 /* About Page */
 
 .aboutWrapper {
@@ -316,27 +304,6 @@ body {
     
 }
 
-/* @media (min-width: 959px) {
-    .showcase-item {
-        width: 33%;
-        height: 100%;
-    }
-}
-
-@media (max-width: 958px) and (min-width: 501px) {
-    .showcase-item {
-        width: 47%;
-        height: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .showcase-item {
-        width: 100%;
-        height: 100%;
-    }
-} */
-
 /* Experience Page */
 
 .experienceBody {
@@ -406,36 +373,6 @@ body {
 .experience a img {
     height: 100%;
 }
-
-/* 
-.experienceList .overlay {
-    width: 80%;
-    max-width: 600px;
-    display: none;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #535353;
-}
-
-.experienceList img {
-    display: block;
-    width: 50%;
-    margin: 5% auto;
-    border: 2px solid white;
-}
-
-.experienceList h2 {
-    margin: 0;
-    text-align: center;
-}
-
-.experienceList h3 {
-    margin: 0;
-    text-align: center;
-    color: #535353;
-} */
 
 /*Contact Page*/
 
